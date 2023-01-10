@@ -1,20 +1,26 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    HijoComponent
+    HijoComponent,
+    DataBindingComponent
   ],
   imports: [
-    CommonModule
-  ], exports: [
+    CommonModule,
+    FormsModule
+  ],
+  exports: [
     NavbarComponent,
-    HijoComponent
+    HijoComponent,
+    DataBindingComponent
   ]
 })
 export class ComponentsModule { }

@@ -8,11 +8,20 @@ import { Component } from '@angular/core';
 export class DataBindingComponent {
   titulo: string = 'Data Binding Interpolation '
   texto!: string
+  element = false;
   valueButton: string = 'Show'
-  mostrarTexto() {
+  
+  showData() {
     this.texto = 'Event Binding, es el mecanismo de data binding mediante el cual trabaja con los eventos que se encuentra en el DOM'
     this.valueButton = "Hide"
+    return (this.element = true);
   }
+  hideData() {
+    this.valueButton = "Show"
+    return (this.element = false);
+  }
+
+
 
   twoWay!: string
 }
